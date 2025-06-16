@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastian L. Berg | Genomics & Bioinformatics</title>
+    <meta name="description" content="Portfolio of Sebastian L. Berg, M.Sc. in Biosciences and Genomics. Showcasing research in population genomics, bioinformatics skills, and professional experience.">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .hero-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        .profile-img {
+            max-width: 250px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .section-title {
+            padding-bottom: 2rem;
+            text-align: center;
+        }
+        .research-figure {
+            max-width: 100%;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .list-group-item {
+            border-left: 0;
+            border-right: 0;
+        }
+        footer {
+            background: #343a40;
+            color: white;
+            padding: 40px 0;
+        }
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: white;
+        }
+        .award-icon {
+            color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sebastian L. Berg</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#research">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education & Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="assets/profile.jpg" alt="Sebastian L. Berg" class="profile-img mb-4 mb-md-0">
+                </div>
+                <div class="col-md-8">
+                    <h1 class="display-4">Sebastian L. Berg, M.Sc.</h1>
+                    <p class="lead">Bioinformatics & Population Genomics</p>
+                    <p>
+                        A highly motivated bioinformatician with a solid foundation in population genomics and proven experience analyzing complex genomic data. My Master's thesis focused on mapping the population structure and demographic history of *Calanus hyperboreus* using targeted sequencing and SNP analysis. I am proficient with R, Bash scripting, and a range of bioinformatics software (GATK, SAMTOOLS, PLINK2). I am eager to apply my skills to contribute to innovative research.
+                    </p>
+                    <div class="mt-4">
+                        <a href="mailto:nolsebastian@gmail.com" class="btn btn-primary me-2"><i class="fas fa-envelope me-2"></i>Email Me</a>
+                        <a href="https://www.linkedin.com/" class="btn btn-outline-secondary"><i class="fab fa-linkedin me-2"></i>LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Master's Thesis Research</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card p-4 mb-4">
+                        <h3 class="card-title">GOT STRUCTURE? Population Genetic Structure and Demographic History of *Calanus hyperboreus*</h3>
+                        <p class="text-muted">Nord University | M.Sc. Biosciences, Genomics | July 2024</p>
+
+                        <h5 class="mt-3">Abstract</h5>
+                        <p>
+                            *Calanus hyperboreus*, a keystone zooplankton species in Arctic food webs, has been understudied due to challenges in sequencing its large, repetitive genome. This study utilized target capture sequencing (TCS) to investigate its population genetic structure. From an initial ~4.9 million SNPs, a filtered dataset of 389 SNPs from 54 individuals across 11 locations was analyzed. Population genetic analyses revealed high levels of gene flow, suggesting *C. hyperboreus* is a single panmictic population. However, pairwise $F_{ST}$ comparisons detected subtle but significant differentiation between certain locations. Demographic analyses (Tajima’s D, Site Frequency Spectrum) revealed a skew toward low-frequency variants, indicating a recent population expansion.
+                        </p>
+
+                        <h5 class="mt-4">Key Findings & Visualizations</h5>
+                        <div class="row align-items-center">
+                            <div class="col-md-7">
+                                <h6>1. A Single Panmictic Population with Subtle Structure</h6>
+                                <p>Principal Component Analysis (PCA) and ADMIXTURE analysis did not reveal distinct genetic clusters corresponding to sampling locations, suggesting high gene flow. However, Discriminant Analysis of Principal Components (DAPC) and pairwise $F_{ST}$ comparisons showed subtle clustering and statistically significant differentiation between some locations, particularly the Chukchi Sea samples.</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="assets/figure5.png" alt="PCA and DAPC of C. hyperboreus" class="research-figure">
+                                <p class="text-muted small text-center">Fig. 5: PCA (left) and DAPC (right) of the full-scale study showing broad overlap with subtle clustering.</p>
+                            </div>
+                        </div>
+
+                         <div class="row align-items-center mt-4">
+                             <div class="col-md-7">
+                                 <h6>2. Evidence of Recent Population Expansion</h6>
+                                 <p>The Site Frequency Spectrum (SFS) showed a significant excess of rare alleles (low-frequency variants), a classic signature of recent population expansion. This finding, supported by a negative overall Tajima's D value, suggests the species may have undergone a demographic expansion, possibly following the last glacial period, similar to its relative *C. glacialis*.</p>
+                             </div>
+                            <div class="col-md-5">
+                                 <img src="assets/figure9.png" alt="Site Frequency Spectrum of C. hyperboreus" class="research-figure">
+                                 <p class="text-muted small text-center">Fig. 9: The observed Site Frequency Spectrum (SFS) compared to models of growth, constant, and decline scenarios.</p>
+                             </div>
+                        </div>
+                        
+                        <div class="row align-items-center mt-4">
+                            <div class="col-md-7">
+                                <h6>3. Low but Significant Pairwise Differentiation</h6>
+                                <p>While overall structure was weak, pairwise $F_{ST}$ (Weir-Cockerham) comparisons revealed statistically significant, albeit low, levels of genetic differentiation between several sampling locations. This indicates that while gene flow is the dominant force, factors like geographic distance or local adaptation may contribute to minor divergence.</p>
+                            </div>
+                           <div class="col-md-5">
+                                <img src="assets/figure8.png" alt="Pairwise Fst heatmap" class="research-figure">
+                                <p class="text-muted small text-center">Fig. 8: Pairwise Weir-Cockerham $F_{ST}$ comparisons. Stars indicate significance (p < 0.05).</p>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Skills & Specialities</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title text-center"><i class="fas fa-dna me-2"></i>Bioinformatics</h4>
+                            <p class="text-center">
+                                My bioinformatics skills extend beyond just running tools; I focus on understanding the underlying algorithms to adapt them to new challenges. I thrive on mastering complex pipelines and developing custom scripts in R and Bash to harness the full potential of genomic data.
+                            </p>
+                            <hr>
+                            <p><strong>Languages:</strong> R, Bash Scripting</p>
+                            <p><strong>Tools & Pipelines:</strong> GATK, VCFtools, PLINK2, SAMtools, BWA-MEM, ADMIXTURE, Trim Galore, Picard Tools, fastsimcoal2.</p>
+                            <p><strong>Genomic Analyses:</strong> SNP Calling, Population Structure (PCA, DAPC, ADMIXTURE), Demographic History (SFS, Tajima's D, Stairway Plots), F-statistics.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title text-center"><i class="fas fa-chart-line me-2"></i>Analytics & Communication</h4>
+                             <p class="text-center">
+                                My analytical abilities are characterized by a strong focus on clear communication and impactful visualization. I excel at translating complex data into actionable insights, combining statistical methods with data visualization to create compelling narratives that support decision-making.
+                            </p>
+                            <hr>
+                            <p><strong>Data Visualization:</strong> Advanced proficiency with `ggplot2` and the `Tidyverse` ecosystem for creating publication-quality figures.</p>
+                            <p><strong>Statistical Analysis:</strong> Application of statistical tests (e.g., Mann-Whitney U), permutation testing, and cross-validation to ensure robust results.</p>
+                            <p><strong>General Skills:</strong> Teamwork, Problem Solving, Scientific Communication, Project Management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Education & Experience</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4 class="mb-3">Education</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <p class="mb-0 fw-bold">M.Sc. in Biosciences, Genomics</p>
+                            <p class="mb-0 text-muted">Nord University | 2022 – 2025</p>
+                            <p class="mb-0 mt-1"><i class="fas fa-award award-icon me-2"></i>Awarded "Best Master Student" (2024)</p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="mb-0 fw-bold">B.Sc. in Biology</p>
+                            <p class="mb-0 text-muted">Nord University | 2019 – 2022</p>
+                        </li>
+                    </ul>
+                     <h4 class="mb-3 mt-4">Certifications</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">FELASA Certification in Animal Experimentation (Functions A, B, D)</li>
+                        <li class="list-group-item">Driver's License - Class B</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h4 class="mb-3">Work Experience</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <p class="mb-0 fw-bold">Accessioner / Sample Preparation & Labeling</p>
+                            <p class="mb-0 text-muted">Labora | March 2025 – Present (Temporary Contract)</p>
+                            <p class="mt-2">
+                                Responsible for accessioning, preparing, and labeling biological samples, as well as logistics. Additional duties include sample handling and storage within the Cryolab facility.
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="mb-0 fw-bold">Store Clerk</p>
+                            <p class="mb-0 text-muted">COOP PRIX, Straumen | 2018 – 2024</p>
+                            <p class="mt-2">
+                                Maintained a permanent part-time position throughout my bachelor's and master's studies. Responsibilities included providing exceptional customer service, managing inventory and store displays, and handling sales transactions. This role strengthened my skills in communication, responsibility, and time management.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="contact" class="text-center">
+        <div class="container">
+            <h2>Contact</h2>
+            <p class="lead">Feel free to reach out for collaborations or inquiries.</p>
+            <div class="mt-4">
+                <a href="mailto:nolsebastian@gmail.com" class="h4 me-4"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/" class="h4 me-4"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/" class="h4"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="mt-4">
+                <p>Location: Nordland, Norway</p>
+                <p class="text-muted small">&copy; 2024 Sebastian L. Berg. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
