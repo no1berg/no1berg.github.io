@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastian L. Berg | Genomics & Bioinformatics</title>
+    <meta name="description" content="Portfolio of Sebastian L. Berg, M.Sc. in Biosciences and Genomics. Showcasing research in population genomics, bioinformatics skills, and professional experience.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #003366; /* Deep blue for a professional, scientific feel */
+            --secondary-color: #4A90E2; /* A brighter blue for accents and links */
+            --background-color: #fdfdfd; /* A slightly softer white */
+            --light-gray: #f0f2f5;
+            --text-color: #333;
+            --heading-font: 'Georgia', 'Times New Roman', serif;
+            --body-font: 'Roboto', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            font-family: var(--body-font);
+            color: var(--text-color);
+            background-color: var(--background-color);
+            scroll-behavior: smooth;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-family: var(--heading-font);
+            font-weight: bold;
+            color: var(--primary-color) !important;
+        }
+
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--secondary-color) !important;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            background: var(--background-color);
+            padding: 100px 0;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--light-gray);
+            box-shadow: 0 10px 30px rgba(0, 51, 102, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(74, 144, 226, 0.2);
+        }
+
+        .hero-section .display-4 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        .lead {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            font-family: var(--heading-font);
+            font-weight: 400;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 12px 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #002244; /* Darker shade */
+            border-color: #002244;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-secondary {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+            padding: 12px 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+
+        /* --- Section Styling --- */
+        section {
+            padding: 80px 0;
+        }
+        
+        #research, #education {
+            background-color: var(--light-gray);
+        }
+
+        .section-title {
+            padding-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        /* --- Research Section --- */
+        .research-card {
+            background: #fff;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 2.5rem;
+        }
+        
+        .research-figure {
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .research-figure:hover {
+            transform: scale(1.03);
+        }
+
+        /* --- Skills Section --- */
+        .skill-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .skill-card .card-title i {
+            color: var(--secondary-color);
+        }
+
+        /* --- Education & Experience Section --- */
+        .timeline {
+            list-style: none;
+            padding: 0;
+            position: relative;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 12px;
+            width: 2px;
+            background: #dee2e6;
+            margin-left: -1.5px;
+        }
+        
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 45px;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: var(--secondary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            border: 2px solid var(--light-gray);
+        }
+        
+        .award-icon {
+            color: #ffc107;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary-color);
+            color: #e9ecef;
+            padding: 60px 0;
+        }
+        
+        footer h2 {
+            color: white;
+        }
+        
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: white;
+        }
+        
+        .social-icons a {
+            font-size: 1.8rem;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+        
+        .social-icons a:hover {
+            transform: translateY(-3px);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Projects</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Repositories</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4 d-flex align-items-stretch">
+                    <div class="card skill-card w-100">
+                        <div class="card-body">
+                            <h4 class="card-title text-center"><i class="fas fa-dna me-2"></i>DNAAT</h4>
+                            <p class="text-center">
+                              A lightweight command-line pairwise sequence alignment tool, with both local and global algorithms implemented. Work in progress.
+                            </p>
+                            <hr>
+                            <p><strong>Repo:</strong><a href="https://github.com/no1berg/DNAAT"> DNAAT</a></p>
+                            <p><strong>GitHub Pages:</strong><a href="https://no1berg.github.io/dnaat/"> Docs</a></p>
+                            <p><strong>Implementation:</strong> Maintly Python, with performance intensive functions written in C.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4 d-flex align-items-stretch">
+                    <div class="card skill-card w-100">
+                        <div class="card-body">
+                            <h4 class="card-title text-center"><i class="fas fa-chart-line me-2"></i>LDH Statistical Analysis Workflow (Comming)</h4>
+                             <p class="text-center">
+                                To be added later: Will be an implementation of my R workflow developed for identifying dose wise relationships of the cytotoxicity of compounds, as measured using LDH assays.
+                            </p>
+                            <hr>
+                            <p><strong>Repo:</strong> Not released yet.</p>
+                            <p><strong>Implementation:</strong> R</p>
+                            <p><strong>Statistical Implementation:</strong> Kurskal-Wallis, Visualization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="contact" class="text-center">
+        <div class="container">
+            <h2>Contact</h2>
+            <p class="lead">Feel free to reach out for collaborations or inquiries.</p>
+            <div class="mt-4 social-icons">
+                <a href="mailto:nolsebastian@gmail.com" class="me-4"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/berg-sebastian/" class="me-4"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/no1berg" class=""><i class="fab fa-github"></i></a>
+            </div>
+            <div class="mt-4">
+                <p>Location: Nordland, Norway</p>
+                <p class="text-muted small">&copy; 2025 Sebastian L. Berg. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="fig5Modal" tabindex="-1" aria-labelledby="fig5ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+           <div class="modal-header">
+                <h5 class="modal-title" id="fig5ModalLabel">Fig. 5: PCA and DAPC</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          <div class="modal-body text-center">
+            <img src="assets/figure5.png" class="img-fluid" alt="Enlarged view of PCA and DAPC of C. hyperboreus">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="fig9Modal" tabindex="-1" aria-labelledby="fig9ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+           <div class="modal-header">
+                <h5 class="modal-title" id="fig9ModalLabel">Fig. 9: Site Frequency Spectrum</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          <div class="modal-body text-center">
+            <img src="assets/figure9.png" class="img-fluid" alt="Enlarged view of the Site Frequency Spectrum of C. hyperboreus">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="fig8Modal" tabindex="-1" aria-labelledby="fig8ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+           <div class="modal-header">
+                <h5 class="modal-title" id="fig8ModalLabel">Fig. 8: Pairwise Fst Heatmap</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          <div class="modal-body text-center">
+            <img src="assets/figure8.png" class="img-fluid" alt="Enlarged view of the Pairwise Fst heatmap">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
