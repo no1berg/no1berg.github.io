@@ -167,9 +167,18 @@ section {
     box-shadow: 0 8px 30px rgba(0,0,0,0.08);
 }
 
+.skill-card .card-title {
+    text-align: left; /* Aligns the main card titles to the left */
+}
+
 .skill-card .card-title i {
     color: var(--secondary-color);
 }
+
+.skill-card .card-body p {
+    text-align: left; /* Aligns paragraph text to the left */
+}
+
 
 /* --- Education & Experience Section --- */
 .timeline {
