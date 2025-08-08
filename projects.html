@@ -24,13 +24,31 @@
 
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Projects</a>
+            <a class="navbar-brand" href="index.html">Projects</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#research">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#education">Education & Experience</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -38,9 +56,9 @@
     <main>
         <section id="skills">
             <div class="container">
-                <h2 class="section-title">Repositories</h2>
+                <h2 class="section-title">Repositories & Projects</h2>
                 <div class="row">
-                    <div class="col-lg-6 mb-4 d-flex align-items-stretch">
+                    <div class="col-lg-4 mb-4 d-flex align-items-stretch">
                         <div class="card skill-card w-100">
                             <div class="card-body">
                                 <h4 class="card-title text-center"><i class="fas fa-dna me-2"></i>DNAAT</h4>
@@ -52,26 +70,41 @@
                                 <p><strong>Repo:</strong><a href="https://github.com/no1berg/DNAAT"> DNAAT</a></p>
                                 <p><strong>GitHub Pages:</strong><a href="https://no1berg.github.io/dnaat/"> Docs</a>
                                 </p>
-                                <p><strong>Implementation:</strong> Maintly Python, with performance intensive functions
+                                <p><strong>Implementation:</strong> Mainly Python, with performance-intensive functions
                                     written in C.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-6 mb-4 d-flex align-items-stretch">
+                    <div class="col-lg-4 mb-4 d-flex align-items-stretch">
                         <div class="card skill-card w-100">
                             <div class="card-body">
                                 <h4 class="card-title text-center"><i class="fas fa-chart-line me-2"></i>LDH Statistical
-                                    Analysis Workflow (Comming)</h4>
+                                    Analysis Workflow</h4>
                                 <p class="text-center">
-                                    To be added later: Will be an implementation of my R workflow developed for
+                                    An implementation of my R workflow developed for
                                     identifying dose-wise relationships of the cytotoxicity of compounds, as measured
                                     using LDH assays.
                                 </p>
                                 <hr>
-                                <p><strong>Repo:</strong> Not released yet.</p>
+                                <p><strong>Repo:</strong> Coming Soon</p>
                                 <p><strong>Implementation:</strong> R</p>
-                                <p><strong>Statistical Implementation:</strong> Kurskal-Wallis, Visualization</p>
+                                <p><strong>Statistical Implementation:</strong> Kruskal-Wallis, Dunn's test, and data visualization with ggplot2.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4 d-flex align-items-stretch">
+                        <div class="card skill-card w-100">
+                            <div class="card-body">
+                                <h4 class="card-title text-center"><i class="fas fa-water me-2"></i>Population Genomics of *Calanus hyperboreus*</h4>
+                                <p class="text-center">
+                                    My Master's thesis research, investigating the population genetic structure and demographic history of the keystone Arctic copepod, *Calanus hyperboreus*.
+                                </p>
+                                <hr>
+                                <p><strong>Publication:</strong> Master's Thesis</p>
+                                <p><strong>Skills:</strong> Population Genomics, Bioinformatics, R, GATK, VCFtools, PLINK2, ADMIXTURE</p>
+                                <p><a href="assets/Sebastian_Berg_Thesis.pdf" class="btn btn-outline-secondary btn-sm mt-2">View Thesis (PDF)</a></p>
                             </div>
                         </div>
                     </div>
