@@ -1,259 +1,122 @@
-        :root {
-            --primary-color: #003366;
-            /* Deep blue for a professional, scientific feel */
-            --secondary-color: #4A90E2;
-            /* A brighter blue for accents and links */
-            --background-color: #1f1f1f;
-            /* A slightly softer white */
-            --light-gray: #1b1b1b;
-            --text-color: #333;
-            --heading-font: 'Georgia', 'Times New Roman', serif;
-            --body-font: 'Roboto', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
 
-        body {
-            font-family: var(--body-font);
-            color: var(--text-color);
-            background-color: var(--background-color);
-            scroll-behavior: smooth;
-            line-height: 1.7;
-        }
+:root {
+    --primary-color: #003366;
+    --secondary-color: #4A90E2;
+    --background-color: #1f1f1f;
+    --light-gray: #2a2a2a;
+    --text-color: #e0e0e0;
+    --heading-font: 'Georgia', 'Times New Roman', serif;
+    --body-font: 'Roboto', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: var(--heading-font);
-            font-weight: 700;
-            color: var(--primary-color);
-        }
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+    line-height: 1.7;
+}
 
-        .navbar {
-            background-color: rgba(24, 24, 24, 0.85);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-            transition: background-color 0.3s ease;
-        }
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--primary-color);
+}
 
-        .navbar-brand {
-            font-family: var(--heading-font);
-            font-weight: bold;
-            color: var(--primary-color) !important;
-        }
+/* Navbar */
+.navbar {
+    background-color: rgba(24, 24, 24, 0.85);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    transition: background-color 0.3s ease;
+}
 
-        .nav-link {
-            transition: color 0.3s ease;
-        }
+.navbar-brand {
+    font-family: var(--heading-font);
+    font-weight: bold;
+    color: var(--primary-color) !important;
+}
 
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--secondary-color) !important;
-        }
+.nav-link {
+    transition: color 0.3s ease;
+}
 
-        /* --- Hero Section --- */
-        .hero-section {
-            background: var(--background-color);
-            padding: 100px 0;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-        }
+.nav-link:hover,
+.nav-link.active {
+    color: var(--secondary-color) !important;
+}
 
-        .profile-img {
-            width: 280px;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid var(--light-gray);
-            box-shadow: 0 10px 30px rgba(0, 51, 102, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+/* Section Styling */
+section {
+    padding: 80px 0;
+}
 
-        .profile-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(74, 144, 226, 0.2);
-        }
+.section-title {
+    padding-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    color: var(--secondary-color);
+}
 
-        .hero-section .display-4 {
-            font-size: 3.5rem;
-            font-weight: 700;
-        }
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
 
-        .lead {
-            font-size: 1.5rem;
-            color: var(--secondary-color);
-            font-family: var(--heading-font);
-            font-weight: 400;
-        }
+/* Skill Cards */
+.skill-card {
+    background-color: var(--light-gray);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--text-color);
+}
 
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 12px 25px;
-            transition: all 0.3s ease;
-        }
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
 
-        .btn-primary:hover {
-            background-color: #002244;
-            /* Darker shade */
-            border-color: #002244;
-            transform: translateY(-2px);
-        }
+.skill-card .card-title i {
+    color: var(--secondary-color);
+}
 
-        .btn-outline-secondary {
-            border-color: var(--secondary-color);
-            color: var(--secondary-color);
-            padding: 12px 25px;
-            transition: all 0.3s ease;
-        }
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: #e9ecef;
+    padding: 60px 0;
+}
 
-        .btn-outline-secondary:hover {
-            background-color: var(--secondary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
+footer h2 {
+    color: white;
+}
 
+footer a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-        /* --- Section Styling --- */
-        section {
-            padding: 80px 0;
-        }
+footer a:hover {
+    color: white;
+}
 
-        #research,
-        #education {
-            background-color: var(--light-gray);
-        }
+.social-icons a {
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
 
-        .section-title {
-            padding-bottom: 3rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 2.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: var(--secondary-color);
-        }
-
-        /* --- Research Section --- */
-        .research-card {
-            background: #fff;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            padding: 2.5rem;
-        }
-
-        .research-figure {
-            max-width: 100%;
-            border-radius: 8px;
-            border: 1px solid #dee2e6;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-
-        .research-figure:hover {
-            transform: scale(1.03);
-        }
-
-        /* --- Skills Section --- */
-        .skill-card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background-color: #1a1a1a;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        .skill-card .card-title i {
-            color: var(--secondary-color);
-        }
-
-        /* --- Education & Experience Section --- */
-        .timeline {
-            list-style: none;
-            padding: 0;
-            position: relative;
-        }
-
-        .timeline:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 12px;
-            width: 2px;
-            background: #dee2e6;
-            margin-left: -1.5px;
-        }
-
-        .timeline-item {
-            margin-bottom: 30px;
-            position: relative;
-            padding-left: 45px;
-        }
-
-        .timeline-icon {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            background: var(--secondary-color);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            border: 2px solid var(--light-gray);
-        }
-
-        .award-icon {
-            color: #ffc107;
-        }
-
-        /* --- Footer --- */
-        footer {
-            background: var(--primary-color);
-            color: #e9ecef;
-            padding: 60px 0;
-        }
-
-        footer h2 {
-            color: white;
-        }
-
-        footer a {
-            color: #adb5bd;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: white;
-        }
-
-        .social-icons a {
-            font-size: 1.8rem;
-            transition: transform 0.3s ease;
-            display: inline-block;
-        }
-
-        .social-icons a:hover {
-            transform: translateY(-3px);
-            color: white;
-        }
+.social-icons a:hover {
+    transform: translateY(-3px);
+    color: white;
+}
