@@ -40,7 +40,7 @@ You'll need a web browser to view the files locally. No special software is requ
 
 ## CONTACT
 
-Sebastian L. Berg - [nolsebastian@gmail.com](mailto:nolsebastian@gmail.com)
+Sebastian L. Berg - [no1sebastian@gmail.com](mailto:no1sebastian@gmail.com)
 
 Project Link: [https://github.com/no1berg/no1berg.github.io](https://github.com/no1berg/no1berg.github.io)
 
